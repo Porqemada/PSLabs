@@ -8,6 +8,7 @@ function Get-TotalValue {
     )
     
     begin {
+        $ErrorActionPreference = SilentlyContinue
         [Int]$_totalValue = 0
     }
     
@@ -15,7 +16,7 @@ function Get-TotalValue {
         $_content = Get-Content $Path
         $_content | ForEach-Object {
             
-            [Int]$_totalValue = $_totalValue + $_
+            [Int]$_totalValue = $_totalValue + $_ 
             Write-Host $_totalValue -ForegroundColor Cyan
         }
     }   
