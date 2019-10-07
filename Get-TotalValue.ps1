@@ -3,7 +3,7 @@ function Get-TotalValue {
     param (
         # Array
         [Parameter(Mandatory)]
-        [Array]
+        [string]
         $Path
     )
     
